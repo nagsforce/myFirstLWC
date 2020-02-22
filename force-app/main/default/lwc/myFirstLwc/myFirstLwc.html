@@ -1,0 +1,32 @@
+<template>
+
+    <lightning-card title="My LWC" icon-name="custom:custom30">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <template if:true={greeting}>
+                    <h1>{greeting}</h1><br><br> 
+                </template>
+                <template if:false={greeting}>
+                    <h1>Hello Someone!!</h1><br><br>
+                </template>
+                
+                <template if:true={contacts.data}>
+                    <select id="ContactName">
+                        <template for:each={contacts.data} for:item="contact" for:index="index">
+                                <option key={contact.Id} value={contact.Name}>{contact.Name}</option>
+                        </template>
+                    </select>
+                </template>
+
+             <!--   <template if:true={contacts.error}>
+                    <c-error-panel errors={contacts.error}></c-error-panel>
+                </template>-->
+
+
+                
+            </lightning-layout-item>
+        </lightning-layout>    
+    </lightning-card>
+    
+    
+</template>
