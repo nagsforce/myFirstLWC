@@ -2,7 +2,7 @@ import { LightningElement, track, wire } from 'lwc';
 import getContactList from '@salesforce/apex/ContactController.getContactList';
 
 export default class MyFirstLwc extends LightningElement {
-        @track greeting;
+        @track greeting="Nagarajan";
 
         @wire(getContactList) contacts;
 

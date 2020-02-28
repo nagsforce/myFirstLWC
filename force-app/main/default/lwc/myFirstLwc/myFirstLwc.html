@@ -13,7 +13,7 @@
                 <template if:true={contacts.data}>
                     <select id="ContactName">
                         <template for:each={contacts.data} for:item="contact" for:index="index">
-                                <option key={contact.Id} value={contact.Name}>{contact.Name}</option>
+                                <option key={contact.Id} value={contact.FirstName}>{contact.FirstName}</option>
                         </template>
                     </select>
                 </template>
